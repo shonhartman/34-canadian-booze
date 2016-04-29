@@ -1,9 +1,12 @@
 class ProductController {
-  constructor(ProductsService, $http) {
+  constructor(ProductsService, $http, $stateParams) {
     this._$http = $http;
     this._ProductsService = ProductsService;
-    this.products = [];
-    this.product = "";
+    ProductsService.get($stateParams.id)
+    .then ((response) => {
+      console.log(response);
+      this.product = response.data.result;
+    });
   }
 }
 

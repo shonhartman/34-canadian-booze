@@ -1,14 +1,16 @@
 import angular from 'angular';
 
 import config from './config';
-import controller from './controller';
+import productController from './controllers/product_controller';
+import productsController from './controllers/products_controller';
 import service from './service';
 
 let products = angular.module('tiy.products', []);
 
+
 products.config(config);
-products.controller('ProductsController', controller);
-products.controller('ProductController', controller);
+products.controller('ProductsController', productsController);
+products.controller('ProductController', productController);
 products.service('ProductsService', service);
 
-export default products
+export default products;

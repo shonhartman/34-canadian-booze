@@ -8,11 +8,11 @@ import products from './modules/products';
 let App = angular.module('app', [
   'ionic',
   'ui.router',
-
+  'tiy.products'
 ]);
 
 function config($urlRouterProvider) {
-  $urlRouterProvider.otherwise("/products");
+  $urlRouterProvider.otherwise("/");
 }
 
 App.config(config);

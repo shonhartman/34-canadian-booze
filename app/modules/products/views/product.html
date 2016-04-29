@@ -1,10 +1,30 @@
 <ion-view>
 
+  <ion-nav-title>
+    {{ productCtrl.product.name }}
+  </ion-nav-title>
   <ion-content>
 
-    <div class="bar bar-header bar-positive">
-      <h1 class="title">Product</h1>
-    </div>
+    <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="{{ productCtrl.product.image_thumb_url }}">
+    <h2>{{ productCtrl.product.serving_suggestion }}</h2>
+    <p>{{ productCtrl.product.style }}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="{{ productCtrl.product.image_url }}">
+    <p>
+      {{ product.tasting_note }}
+    </p>
+    <p>
+      <a href="#" class="subdued">{{ productCtrl.product.tertiary_category }}, </a>
+      <a href="#" class="subdued">{{ productCtrl.product.alcohol_content }} alcohol by volume</a>
+    </p>
+  </div>
+
+</div>
 
   </ion-content>
 
